@@ -9,15 +9,14 @@ var cors = require('cors');
 app.use(cors());
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
-app.post('/insert' , (req,res)=>{
-  res.send("all is Done");
-})
-app.post('/datasave' , (req,res)=>{
-  res.send("data Done");
-})
 
-app.post("/datasave",employe.empInsert );
+app.get("/empdisplay",employe.empDisplaydata)
+app.get("/update",employe.empUpdatedata)
+app.post("/delete",employe.empDelatedata)
 
 
-
+// app.post('/insert' , (req,res)=>{
+//   res.send("all is Done");
+// })
+app.post("/insert",employe.empInsert );
 app.listen(8000)

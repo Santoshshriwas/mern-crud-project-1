@@ -1,0 +1,19 @@
+.dis-data table{
+  width: 500px;
+  border: 3PX  SOLID black;
+  background-color: bisque;
+  font-size: 24PX;
+   border-radius: 25PX;   
+   margin-top: 5%;
+   margin-bottom: 20PX;
+}
+.dis-data{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+}
+.border{
+  border-bottom: 3px solid brown;
+  width: 100%;
+}

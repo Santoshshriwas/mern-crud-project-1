@@ -12,10 +12,34 @@ const empInsert =(req,res)=>{
     age:sage,
     salary:ssalary
   })
-  student.save()
+  student.save();
+  res.send("Data Save");
 }
+
+
+const empDisplaydata=(req,res)=>{
+   empModel.find().then((data)=>{
+    res.send(data);
+   })
+}
+const empUpdatedata=async(req,res)=>{
+   empModel.find().then((data)=>{
+    res.json(data);
+   })
+}
+const empDelatedata=async(req,res)=>{
+     let id= req.body.id;
+     empModel.findByIdAndDelete(id).then((data)=>{
+      res.json("record delete")
+     })
+    
+}
+
 module.exports={
   empInsert,
+  empDisplaydata,
+  empUpdatedata,
+  empDelatedata
 }
 
 

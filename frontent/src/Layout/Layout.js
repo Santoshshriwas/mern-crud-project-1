@@ -9,6 +9,7 @@ const Layout = () => {
       <Link to="home">Home</Link>
       <Link to="insert">Insert Data</Link>
       <Link to="display">Dispaly</Link>
+      <Link to="update">Update</Link>
     </div>
 
     <div id='content'>
@@ -16,7 +17,7 @@ const Layout = () => {
     </div>
 
     <hr size="4" color='red'/>
-    www.footer.com
+     <h4 className='footer'>www.footer.com</h4> 
     </>  
   )
 }
