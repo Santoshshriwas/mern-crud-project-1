@@ -4,6 +4,7 @@ import axios from "axios";
 import edit from "../image/edit.jpeg";
 import del from "../image/delete.jpeg";
 import { useNavigate } from "react-router-dom";
+import "./Update.css";
 
 const Update = () => {
   const myNav = useNavigate();
@@ -21,12 +22,12 @@ const Update = () => {
   const recdelete = (id) => {
     let url = `http://localhost:8000/delete`;
     axios.post(url, { id: id }).then((res) => {
-      alert("Delete Successfully");
+      // alert("Delete Successfully");
       loadData();
     });
   };
   const recedit = (id) => {
-    myNav("/edit/"+id);
+    myNav("/edit/" + id);
     // alert(id)
   };
 
@@ -45,7 +46,7 @@ const Update = () => {
                 recedit(key._id);
               }}
             >
-              <img src={edit} width="20" height="20px" />
+              <img src={edit} width="25px" height="25px" />
             </a>
           </td>
           <td>
@@ -55,26 +56,27 @@ const Update = () => {
                 recdelete(key._id);
               }}
             >
-              <img src={del} width="20" height="20px" />
+              <img src={del} width="25px" height="25px" />
             </a>
           </td>
         </tr>
       </>
     );
   });
-
   return (
     <div>
       <h1>Update Youe Emp Data</h1>
-      <table>
-        <tr className="border">
-          <td>EMP NO</td>
-          <td>Name</td>
-          <td>Age</td>
-          <td>Salary</td>
-        </tr>
-        {ans}
-      </table>
+      <div className="color">
+        <table className="border-1">
+          <tr>
+            <td>EMP NO</td>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Salary</td>
+          </tr>
+          {ans}
+        </table>
+      </div>
     </div>
   );
 };
