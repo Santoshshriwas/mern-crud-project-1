@@ -10,6 +10,7 @@ const Layout = () => {
       <Link to="insert">Insert Data</Link>
       <Link to="display">Dispaly</Link>
       <Link to="update">Update</Link>
+      <Link to="search">Search</Link>
     </div>
 
     <div id='content'>

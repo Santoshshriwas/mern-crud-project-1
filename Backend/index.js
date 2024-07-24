@@ -15,6 +15,7 @@ app.get("/update", employe.empUpdatedata);
 app.post("/delete", employe.empDelatedata);
 app.post("/edit", employe.editdata);
 app.post("/editsave", employe.editsavedata);
+app.post("/search", employe.searchdata);
 
 // app.post('/insert' , (req,res)=>{
 //   res.send("all is Done");

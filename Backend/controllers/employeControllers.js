@@ -59,6 +59,14 @@ const editsavedata = async (req, res) => {
       res.send("update is done");
     });
 };
+const searchdata=(req,res)=>{
+   let empn= req.body.empno;
+   empModel.find({empno:empn}).then((data)=>{
+      res.json(data)
+   })
+  //  console.log(empn);
+  //  res.send("ok")
+}
 module.exports = {
   empInsert,
   empDisplaydata,
@@ -66,4 +74,5 @@ module.exports = {
   empDelatedata,
   editdata,
   editsavedata,
+  searchdata
 };

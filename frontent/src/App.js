@@ -7,6 +7,7 @@ import Insert from "./conponent/Insert/Insert";
 import Display from "./conponent/Display/Display";
 import Update from "./conponent/Update/Update";
 import Edit from "./conponent/Edit/Edit";
+import Search from "./conponent/Search/Search";
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="/display" element={<Display/>} />
             <Route path="/update" element={<Update/>} />
             <Route path="edit/:id" element={<Edit/>} />
+            <Route path="search" element={<Search/>} />
           </Route>
         </Routes>
       </BrowserRouter>
